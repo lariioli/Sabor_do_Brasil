@@ -1,44 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sabor do Brasil</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="sabor.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
- </head>
- <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sabor do Brasil</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="sabor.css" />
+  </head>
+  <body>
     <main>
-     
-    </main>
-            <footer>
-                <footer class="footer-custom">
-                    <div class="container">
-                      <div class="row align-items-center">
-                        <div class="row">
-                            <div class="col-sm">
-                              &emsp;<p>ㅤ ㅤ</p><h2>Sabor do Brasil</h2>
-                            </div>
-                            <div class="col-sm">
-                            &emsp;<p> ㅤㅤㅤ</p>    <i class="bi bi-instagram"></i> &emsp14; &emsp13; <i class="bi bi-twitter"></i> &emsp14; &emsp13; <i class="bi bi-whatsapp"></i> &emsp14; &emsp13; <i class="bi bi-globe"></i>
-                            </div>
-                            <div class="col-sm">
-                              &emsp;<p>ㅤㅤㅤ</p>  <h2>Copyright - 2024</h2>
-                            </div>
-                          </div>
-                      </div>
-                      </div>
-                    </div>
-                    &emsp14;
-                   
-                      
-                        
-                      
-                  </footer>
-              </footer>  
-        
- </body>
-</html>
+      <div class="container-fluid">
+        <div class="row min-vh-100">
+    
+          <div class="col-md-2 sidebar py-4 text-center">
+            <img src="logo_sabor_do_brasil.png" alt="Logo" class="logo" />
+            <h5 class="mt-2">Sabor do Brasil</h5>
+            <div class="linha-laranja"></div>
+            <p><strong>9</strong><br />Quantidade Likes</p>
+            <p><strong>12</strong><br />Quantidade Dislikes</p>
+          </div>
 
+          <div class="col-md-8 main-content py-3">
+            <h5 class="text-center fw-bold text-black">Publicações</h5>
+
+            <div class="publicacao">
+              <h6 class="fw-bold">Título do prato 01</h6>
+              <img src="prato01.jpg" alt="Prato 01" />
+              <div class="d-flex justify-content-between mt-1">
+                <small>Local 01</small>
+                <small>Maceió - AL</small>
+              </div>
+              <div class="mt-2">
+                <i class="bi bi-hand-thumbs-up" onclick="mostrarLogin()"></i> 2
+                <i class="bi bi-hand-thumbs-down" onclick="mostrarLogin()"></i> 1
+                <i class="bi bi-chat" onclick="mostrarLogin()"></i> 4
+              </div>
+            </div>
+
+            <div class="publicacao">
+              <h6 class="fw-bold">Título do prato 02</h6>
+              <img src="prato02.jpg" alt="Prato 02" />
+              <div class="d-flex justify-content-between mt-1">
+                <small>Local 02</small>
+                <small>Maceió - AL</small>
+              </div>
+              <div class="mt-2">
+                <i class="bi bi-hand-thumbs-up" onclick="mostrarLogin()"></i> 9
+                <i class="bi bi-hand-thumbs-down" onclick="mostrarLogin()"></i> 1
+                <i class="bi bi-chat" onclick="mostrarLogin()"></i> 10
+              </div>
+            </div>
+
+            <div class="publicacao">
+              <h6 class="fw-bold">Título do prato 03</h6>
+              <img src="prato03.jpg" alt="Prato 03" />
+              <div class="d-flex justify-content-between mt-1">
+                <small>Local 03</small>
+                <small>Maceió - AL</small>
+              </div>
+              <div class="mt-2">
+                <i class="bi bi-hand-thumbs-up" onclick="mostrarLogin()"></i> 2
+                <i class="bi bi-hand-thumbs-down" onclick="mostrarLogin()"></i> 1
+                <i class="bi bi-chat" onclick="mostrarLogin()"></i> 2
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-2 login-area d-flex align-items-start justify-content-center pt-4">
+            <button class="btn-login" onclick="mostrarLogin()">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal fade modal-login" id="loginModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4">
+          <h5 class="text-center mb-3">Login</h5>
+          <input id="emailInput" type="email" class="form-control mb-2" placeholder="Digite seu e-mail" />
+          <input id="senhaInput" type="password" class="form-control mb-3" placeholder="Digite sua senha" />
+          <div id="erroLogin" class="text-danger small mb-2" style="display:none;">Usuário ou senha incorreto</div>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-entrar" onclick="validarLogin()">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-custom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="row">
+            <div class="col-sm">
+              <h5>Sabor do Brasil</h5>
+            </div>
+            <div class="col-sm text-center">
+              <i class="bi bi-instagram icone-svg-footer mx-2"></i>
+              <i class="bi bi-twitter-x icone-svg-footer mx-2"></i>
+              <i class="bi bi-whatsapp icone-svg-footer mx-2"></i>
+              <i class="bi bi-globe icone-svg-footer mx-2"></i>
+            </div>
+            <div class="col-sm text-end">
+              <h5>Copyright - 2024</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script>
+      function mostrarLogin() {
+        const modal = new bootstrap.Modal(document.getElementById('loginModal'));
+        document.getElementById('emailInput').classList.remove('input-error');
+        document.getElementById('senhaInput').classList.remove('input-error');
+        document.getElementById('erroLogin').style.display = 'none';
+        modal.show();
+      }
+
+      function validarLogin() {
+        const email = document.getElementById('emailInput');
+        const senha = document.getElementById('senhaInput');
+        const erro = document.getElementById('erroLogin');
+
+        email.classList.remove('input-error');
+        senha.classList.remove('input-error');
+        erro.style.display = 'none';
+
+        if (email.value === 'usuario@sabor.com' && senha.value === '123456') {
+          window.location.href = 'usuario_logado.html';
+        } else {
+          if (!email.value) email.classList.add('input-error');
+          if (!senha.value) senha.classList.add('input-error');
+          erro.style.display = 'block';
+        }
+      }
+    </script>
+  </body>
+</html>
