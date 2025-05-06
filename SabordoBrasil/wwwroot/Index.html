@@ -10,15 +10,13 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css"/>
     <link rel="stylesheet" href="sabor.css" />
   </head>
   <body>
     <main>
       <div class="container-fluid">
         <div class="row min-vh-100">
-    
           <div class="col-md-2 sidebar py-4 text-center">
             <img src="img/logo/logo_sabor_do_brasil.png" alt="Logo" class="logo" />
             <h5 class="mt-2">Sabor do Brasil</h5>
@@ -46,7 +44,7 @@
 
             <div class="publicacao">
               <h6 class="fw-bold">Título do prato 02</h6>
-              <img src="prato02.jpg" alt="Prato 02" />
+              <img src="img/publicacao/publicacao02.png" alt="Prato 02" />
               <div class="d-flex justify-content-between mt-1">
                 <small>Local 02</small>
                 <small>Maceió - AL</small>
@@ -60,7 +58,7 @@
 
             <div class="publicacao">
               <h6 class="fw-bold">Título do prato 03</h6>
-              <img src="prato03.jpg" alt="Prato 03" />
+              <img src="img/publicacao/publicacao01.png" alt="Prato 03" />
               <div class="d-flex justify-content-between mt-1">
                 <small>Local 03</small>
                 <small>Maceió - AL</small>
@@ -80,6 +78,7 @@
       </div>
     </main>
 
+   
     <div class="modal fade modal-login" id="loginModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content p-4">
@@ -90,6 +89,26 @@
           <div class="d-flex justify-content-between">
             <button class="btn btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
             <button class="btn btn-entrar" onclick="validarLogin()">Entrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="modal fade" id="loginSuccessModal" tabindex="-1" aria-labelledby="loginSuccessModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-success">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title" id="loginSuccessModalLabel">Login Bem-sucedido</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card border-success">
+              <div class="card-body text-success">
+                <h5 class="card-title">Login realizado com sucesso</h5>
+                <p class="card-text">Você será redirecionado em instantes.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -136,7 +155,16 @@
         erro.style.display = 'none';
 
         if (email.value === 'usuario@sabor.com' && senha.value === '123456') {
-          window.location.href = 'usuario_logado.html';
+          const loginModal = bootstrap.Modal.getInstance(document.getElementById('loginModal'));
+          loginModal.hide();
+
+          const successModal = new bootstrap.Modal(document.getElementById('loginSuccessModal'));
+          successModal.show();
+
+          setTimeout(() => {
+            
+            successModal.hide();
+          }, 2500);
         } else {
           if (!email.value) email.classList.add('input-error');
           if (!senha.value) senha.classList.add('input-error');
