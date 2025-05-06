@@ -8,21 +8,6 @@ body {
   text-align: center;
 }
 
-.modal-login .modal-content {
-  border-radius: 10px;
-}
-.btn-cancelar {
-  border: 1px solid #D97014;
-  color: #D97014;
-}
-.btn-entrar {
-  background-color: #D97014;
-  color: #FFFFFF;
-}
-.input-error {
-  border: 1px solid red;
-} 
-
 .sidebar img {
   width: 80px;
 }
@@ -51,8 +36,21 @@ body {
 
 .publicacao img {
   width: 100%;
-  height: auto;
-  border-radius: 5px;
+  height: 500px; 
+  object-fit: cover; 
+}
+
+.publicacao i {
+  font-size: 1.5rem;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.publicacao .mt-2 {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .login-area {
@@ -69,12 +67,31 @@ body {
   margin-top: 20px;
 }
 
+.modal-login .modal-content {
+  border-radius: 10px;
+}
+
+.btn-cancelar {
+  border: 1px solid #D97014;
+  color: #D97014;
+}
+
+.btn-entrar {
+  background-color: #D97014;
+  color: #FFFFFF;
+}
+
+.input-error {
+  border: 1px solid red;
+}
+
 .footer-custom {
   background-color: #D97014; 
   color: white;
   padding-top: 40px;
   padding-bottom: 40px;
 }
+
 .footer-custom i {
   font-size: 1.3rem; 
   color: white;
