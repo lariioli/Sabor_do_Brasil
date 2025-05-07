@@ -43,7 +43,6 @@ body {
   object-fit: cover;
 }
 
-
 .publicacao i {
   font-size: 1.5rem;
   margin-right: 8px;
@@ -90,14 +89,14 @@ body {
 }
 
 .footer-custom {
-  background-color: #D97014; 
+  background-color: #D97014;
   color: white;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 .footer-custom i {
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
   color: white;
 }
 
@@ -106,6 +105,9 @@ body {
   height: 24px;
   fill: white;
 }
-.input-error {
-  border: 1px solid red;
-} 
+
+.logo.rounded-circle {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}

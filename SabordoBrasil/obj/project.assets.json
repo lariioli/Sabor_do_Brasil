@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alunos\\OneDrive\\Documents\\Larissa\\Sabor_do_Brasil\\SabordoBrasil\\SabordoBrasil.csproj",
+      "projectUniqueName": "C:\\Users\\Alunos\\OneDrive\\Documents\\Sara\\Sabor_do_Brasil\\SabordoBrasil\\SabordoBrasil.csproj",
       "projectName": "SabordoBrasil",
-      "projectPath": "C:\\Users\\Alunos\\OneDrive\\Documents\\Larissa\\Sabor_do_Brasil\\SabordoBrasil\\SabordoBrasil.csproj",
+      "projectPath": "C:\\Users\\Alunos\\OneDrive\\Documents\\Sara\\Sabor_do_Brasil\\SabordoBrasil\\SabordoBrasil.csproj",
       "packagesPath": "C:\\Users\\Alunos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alunos\\OneDrive\\Documents\\Larissa\\Sabor_do_Brasil\\SabordoBrasil\\obj\\",
+      "outputPath": "C:\\Users\\Alunos\\OneDrive\\Documents\\Sara\\Sabor_do_Brasil\\SabordoBrasil\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alunos\\AppData\\Roaming\\NuGet\\NuGet.Config"
